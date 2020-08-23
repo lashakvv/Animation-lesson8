@@ -1,0 +1,114 @@
+html, body{
+	height: 100%;
+	width: 100%;
+}
+body{
+	padding:1%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    position: relative;
+}
+.nav{
+	top:35px;
+	left: 40px;
+}
+.nav-li{
+	display: inline-block;
+	margin-right:40px;
+}
+.p-absolute{
+	position: absolute;
+}
+.nav-a{
+	text-transform: uppercase;
+	font-size: 30px;
+	color: black;
+	animation-name: example;
+	animation-duration: 4s;
+}
+.nav-a:hover{
+	color: yellow;
+	opacity: 0.5;
+}
+.image1{
+    top:30px;
+    right: 25px;
+    height: 500px;
+    animation: anime 3s infinite 2s;
+}    
+.red-box{
+	background-color: red;
+	width: 500px;
+	height: 300px;
+	left: -4px;
+	bottom: -4px;
+	transition: all  0.2s linear 0.4s;
+
+}
+.red-box:hover{
+	background-color: blue;
+}
+.red-box:hover .yellow{
+	background-color: green;
+
+}
+.red-box:hover .text{
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	color:red;
+}
+.yellow{
+	width: 400px;
+	height: 200px;
+	background-color: white;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all  0.3s linear 0.4s;
+	animation: anim 3s infinite 2s;
+}
+.text{
+	font-size: 30px;
+	color: #FFFF00;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	white-space: nowrap;
+	text-transform: uppercase;
+	transition: all  0.3s linear 0.4s;
+}
+.read-more{
+	font-size: 14px;
+	color:#39B54A;
+	right: 10px;
+	bottom: 0;
+	text-transform: uppercase;
+	transition: all  0.3s ease-in-out 0.4s;
+}
+.read-more:hover{
+	color:green;
+	right: 30px;
+	font-size: 30px;
+}
+.created{
+	font-size: 14px;
+	color: #FCEE21;
+	right: 10px;
+	bottom: 10px;
+	text-transform: uppercase;
+}
+@keyframes anim {
+  0%   {top: 0px; background: red; width: 100px;}
+  100% {top: 100px; background: yellow; width: 200px;}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
